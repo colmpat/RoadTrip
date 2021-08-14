@@ -9,8 +9,13 @@ public class City {
         return name;
     }
 
-    public boolean equals(City city) {
-        return this == city || this.getName().equals(city.getName());
+    @Override
+    public String toString() {
+        return name;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return this == obj || this.getName().equals(((City)obj).getName());
+    }
 }
